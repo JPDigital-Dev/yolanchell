@@ -3,117 +3,180 @@
 {% block title %}Dr. Yolanchell Dermatology{% endblock %}
 
 {% block content %}
-<header class="hero">
-    <nav class="nav">
-        <div class="brand">
-            <span class="brand-mark">Y</span>
-            <div>
-                <p class="brand-name">Dr. Yolanchell</p>
-                <p class="brand-subtitle">Dermatology & Skin Health</p>
+<div class="page-shell">
+    <header class="hero" id="top">
+        <nav class="nav">
+            <a class="brand" href="#top" aria-label="Dr. Yolanchell home">
+                <span class="brand-mark">Y</span>
+                <span class="brand-copy">
+                    <span class="brand-name">Dr. Yolanchell</span>
+                    <span class="brand-subtitle">Dermatology & Skin Health</span>
+                </span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#profile">Doctor</a>
+                <a href="#contact">Contact</a>
+                <a class="nav-book" href="#contact">Book</a>
             </div>
-        </div>
-        <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+        </nav>
 
-    <section class="hero-content">
-        <div class="hero-copy">
-            <p class="eyebrow">Board-certified skin care</p>
-            <h1>Confident skin starts with expert care.</h1>
-            <p class="hero-text">
-                Personalized dermatology for acne, eczema, pigmentation, mole checks,
-                and advanced skin treatments in a calm, modern practice.
-            </p>
-            <div class="hero-actions">
-                <a class="button button-primary" href="#contact">Book a Consultation</a>
-                <a class="button button-secondary" href="#services">Explore Services</a>
+        <section class="hero-content reveal">
+            <div class="hero-copy">
+                <p class="eyebrow">Luxury dermatology experience</p>
+                <h1>Precision skin care in a calm, cinematic setting.</h1>
+                <p class="hero-text">
+                    Advanced medical and aesthetic dermatology for patients who want expert care,
+                    elegant surroundings, and complete confidence in every step of treatment.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contact">Book Consultation</a>
+                    <a class="button button-secondary" href="#services">Explore Services</a>
+                </div>
             </div>
-        </div>
 
-        <aside class="hero-card">
-            <p class="card-label">Patient care highlights</p>
-            <ul>
-                <li>Same-week skin evaluations</li>
-                <li>Diagnostic mole and lesion screening</li>
-                <li>Medical and aesthetic dermatology</li>
-            </ul>
-            <div class="hours">
-                <p>Clinic Hours</p>
-                <span>Mon-Fri: 08:00-17:00</span>
+            <aside class="hero-panel">
+                <p class="panel-kicker">Trusted care</p>
+                <div class="panel-metric">
+                    <strong>15+</strong>
+                    <span>Years in dermatology and patient-centered skin treatment</span>
+                </div>
+                <div class="panel-metric">
+                    <strong>1000+</strong>
+                    <span>Consultations across acne, pigmentation, lesion checks, and rejuvenation</span>
+                </div>
+                <div class="panel-footer">
+                    <span>Sandton practice</span>
+                    <span>Mon-Fri 08:00-17:00</span>
+                </div>
+            </aside>
+        </section>
+    </header>
+
+    <main>
+        <section class="section intro reveal">
+            <div class="section-copy">
+                <p class="eyebrow">Signature care</p>
+                <h2>Modern treatment pathways for healthier, radiant skin.</h2>
             </div>
-        </aside>
-    </section>
-</header>
-
-<main>
-    <section class="section services" id="services">
-        <div class="section-heading">
-            <p class="eyebrow">Services</p>
-            <h2>Dermatology tailored to real concerns.</h2>
-            <p>
-                From early diagnosis to long-term treatment plans, every visit is designed
-                around skin health, comfort, and clarity.
+            <p class="section-text">
+                Every appointment is designed to feel reassuring and refined, with clinical clarity,
+                transparent advice, and treatments tailored to your skin goals.
             </p>
-        </div>
+        </section>
 
-        <div class="service-grid">
-            {% for service in services %}
-            <article class="service-card">
-                <h3>{{ service.title }}</h3>
-                <p>{{ service.description }}</p>
-            </article>
-            {% endfor %}
-        </div>
-    </section>
-
-    <section class="section about" id="about">
-        <div class="about-panel">
-            <div>
-                <p class="eyebrow">About the practice</p>
-                <h2>Warm, evidence-based care for every skin tone.</h2>
+        <section class="section services" id="services">
+            <div class="section-head reveal">
+                <p class="eyebrow">Services</p>
+                <h2>High-touch dermatology with minimal friction.</h2>
             </div>
-            <p>
-                Dr. Yolanchell combines clinical precision with a reassuring patient experience.
-                Each consultation focuses on diagnosis, education, and a treatment plan that
-                feels practical for daily life.
-            </p>
-        </div>
 
-        <div class="feature-row">
-            <article>
-                <h3>Medical Expertise</h3>
-                <p>Treatment plans for chronic, inflammatory, and complex dermatologic conditions.</p>
-            </article>
-            <article>
-                <h3>Preventive Screening</h3>
-                <p>Regular lesion checks and early intervention for sun damage and skin cancer risks.</p>
-            </article>
-            <article>
-                <h3>Patient Education</h3>
-                <p>Clear guidance on skincare routines, medication use, and realistic recovery timelines.</p>
-            </article>
-        </div>
-    </section>
+            <div class="service-grid">
+                <article class="service-card reveal">
+                    <div class="service-media service-acne"></div>
+                    <div class="service-overlay">
+                        <p class="service-index">01</p>
+                        <h3>Acne & Complexion</h3>
+                        <p>Targeted treatment plans for acne, scarring, and ongoing skin balance.</p>
+                    </div>
+                </article>
 
-    <section class="section contact" id="contact">
-        <div class="contact-copy">
-            <p class="eyebrow">Appointments</p>
-            <h2>Ready to take the next step?</h2>
-            <p>
-                Call, email, or visit the clinic to schedule your consultation. This starter website
-                uses sample details that we can personalize next.
-            </p>
-        </div>
+                <article class="service-card reveal">
+                    <div class="service-media service-screening"></div>
+                    <div class="service-overlay">
+                        <p class="service-index">02</p>
+                        <h3>Mole & Lesion Checks</h3>
+                        <p>Calm, precise evaluations for suspicious lesions and skin cancer concerns.</p>
+                    </div>
+                </article>
 
-        <div class="contact-card">
-            <p><strong>Phone:</strong> (010) 555-0143</p>
-            <p><strong>Email:</strong> hello@dryolanchell.com</p>
-            <p><strong>Address:</strong> 24 Willow Crescent, Sandton</p>
-            <a class="button button-primary" href="mailto:hello@dryolanchell.com">Request an Appointment</a>
-        </div>
-    </section>
-</main>
+                <article class="service-card reveal">
+                    <div class="service-media service-pigment"></div>
+                    <div class="service-overlay">
+                        <p class="service-index">03</p>
+                        <h3>Pigmentation Care</h3>
+                        <p>Evidence-based solutions for melasma, uneven tone, and sun-related changes.</p>
+                    </div>
+                </article>
+
+                <article class="service-card reveal">
+                    <div class="service-media service-aesthetic"></div>
+                    <div class="service-overlay">
+                        <p class="service-index">04</p>
+                        <h3>Aesthetic Dermatology</h3>
+                        <p>Subtle rejuvenation and texture refinement with a medical-first approach.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section profile" id="profile">
+            <div class="profile-media reveal" aria-hidden="true"></div>
+            <div class="profile-copy reveal">
+                <p class="eyebrow">Meet your dermatologist</p>
+                <h2>Dr. Yolanchell brings warmth, rigor, and trusted expertise to every consultation.</h2>
+                <p>
+                    Patients choose Dr. Yolanchell for a care style that feels both elevated and grounded:
+                    advanced diagnosis, thoughtful treatment choices, and clear guidance you can trust.
+                </p>
+
+                <div class="credential-list">
+                    <div class="credential-item">
+                        <strong>Board-Certified</strong>
+                        <span>Medical, surgical, and aesthetic dermatology</span>
+                    </div>
+                    <div class="credential-item">
+                        <strong>Patient-First</strong>
+                        <span>Personalized plans designed for comfort and long-term results</span>
+                    </div>
+                    <div class="credential-item">
+                        <strong>Trusted Screening</strong>
+                        <span>Early detection support for lesions, sun damage, and changing moles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section trust reveal">
+            <div class="trust-card">
+                <p class="eyebrow">Why patients return</p>
+                <div class="trust-grid">
+                    <article>
+                        <h3>Measured expertise</h3>
+                        <p>Every recommendation is anchored in dermatologic evidence and a realistic plan for daily life.</p>
+                    </article>
+                    <article>
+                        <h3>Luxury without distance</h3>
+                        <p>A refined experience that still feels welcoming, clear, and deeply personal from first visit onward.</p>
+                    </article>
+                    <article>
+                        <h3>Confident next steps</h3>
+                        <p>Patients leave knowing what was found, what matters most, and exactly how treatment moves forward.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact reveal" id="contact">
+            <div class="contact-copy">
+                <p class="eyebrow">Book your visit</p>
+                <h2>Elegant care starts with a simple first step.</h2>
+                <p>
+                    Reserve a consultation for skin concerns, preventive screening, or aesthetic treatment planning.
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <p><strong>Phone</strong><span>(010) 555-0143</span></p>
+                <p><strong>Email</strong><span>hello@dryolanchell.com</span></p>
+                <p><strong>Location</strong><span>24 Willow Crescent, Sandton</span></p>
+                <div class="contact-actions">
+                    <a class="button button-primary" href="mailto:hello@dryolanchell.com">Request Appointment</a>
+                    <a class="button button-secondary" href="tel:+27105550143">Call the Practice</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
 {% endblock %}
